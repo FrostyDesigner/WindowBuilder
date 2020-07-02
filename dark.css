@@ -1,0 +1,39 @@
+        fieldset{ width: 250;
+            background-color: gray;;
+            border-color: black;
+            border-style: solid;
+            border-width: 10px;
+            border-radius: 0px;
+            /* Apply centering to every fieldset*/
+            display: block;
+            margin: 1.0em auto;
+            text-align: center;
+            width: 400px;
+        }
+        legend{
+            font-weight: bold;
+            background-color: gray;
+            border-style: solid;
+        }
+        .left-block {
+            background-color: gray;
+            border-style: solid;
+            border-color: black;
+            text-transform: uppercase;
+            color: white;
+            padding: 3px;
+        }
+        .right-block{
+            background-color: gray;
+            border-style: solid;
+            border-color: black;
+            text-transform: uppercase;
+            color: white;
+            padding: 3px;
+        }
+        p{
+            color: white;
+        }
+        label{
+            color: white;
+        }

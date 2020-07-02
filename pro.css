@@ -1,0 +1,81 @@
+fieldset {
+    border-style: solid;
+    border-color: purple;
+    border-width: 3px;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+label {
+    width: auto;
+    display: inline-block;
+    text-align: right;
+    vertical-align: top;
+}
+
+label.chkbox {
+    width: auto;
+}
+
+.left-block {
+    color: auto;
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.right-block {
+    color: auto;
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    vertical-align: top;
+}
+
+legend {
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: purple;
+    font-weight: bold;
+}
+
+.chkbox {
+    text-align: left;
+    width: auto;
+}
+
+label:hover {
+    color: red;
+    font-size: 120%;
+}
+
+form {
+    background-color: white;
+    border-style: solid;
+    padding: 30px;
+    margin: 50px;
+    border-radius: 35px;
+}
+
+body {
+    background-color: purple;
+    background-image: radial-gradient(circle, red, blue, purple);
+}
+
+input[type="text"],
+[type="email"],
+[type="tel"],
+textarea {
+    width: 100%;
+}
+
+input[type=submit],
+[type="reset"] {
+    background-color: blue;
+    width: 100px;
+    color: white;
+}

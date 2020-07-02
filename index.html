@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Window Builder</title>
+    <meta name="author" content="TreeFrog">
+    
+    <link rel="stylesheet" href="style.css" id="stylesheet">
+
+    <script type="text/javascript">
+        function changeStyle(url) {
+        document.getElementById('stylesheet').href = url;
+        }
+    </script>
+    
+    <style>
+        table, td, th {
+        border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <FORM action="http://somesite.com/prog/adduser" method="post">
+        <fieldset class="align-center">
+            <legend>Customer Details</legend>
+                <LABEL for="name">Name: </LABEL>
+                <INPUT type="text" id="name" value="Matt LeBlanc">
+                <br>
+                <LABEL for="name">Address: </LABEL>
+                <INPUT type="text" id="address" value="123 Elm St.">
+                <br>
+                <LABEL for="name">City: </LABEL>
+                <INPUT type="text" id="city" value="Abilene">
+                <br>
+                <LABEL for="name">State: </LABEL>
+                <INPUT type="text" id="state" value="TX">
+                <br>
+                <LABEL for="name">Zip: </LABEL>
+                <INPUT type="text" id="zip" value="79602">
+                <br>
+                <label for="date">Date: </label>
+                <input type="date" name="dob" id="dob">
+                <br>
+                <br>
+                <label>Contact Information:</label>
+                <br>
+                <LABEL for="mobile">Mobile: </LABEL>
+                <INPUT type="text" id="mobile" value="(555) 555-1234">
+                <br>
+                <LABEL for="email">Email: </LABEL>
+                <INPUT type="text" id="email" value="tricksy@gmail.com">
+                <br>
+                <br>
+                <label>Preferred method of contact:</label>
+                <input type="radio" id="phone" name="contactPref" value="phone">
+                <label for="phone">Phone</label>
+                <input type="radio" id="email" name="contactPref" value="email">
+                <label for="email">email</label>
+        </fieldset>
+        <fieldset class="align-center">
+            <legend>Window Build</legend>
+            <div class="slidecontainer">                            
+                <label for="windowStyle">Window Style: </label>
+                <input type="radio" name="windowStyle" value="ThermalBRK"/> ThermalBRK
+                <input type="radio" name="windowStyle" value="Vinyl"/> Vinyl
+                <br>
+                <label for="frameColor">Frame Color:</label>
+                <select name="frameColor" id="frameColor">
+                  <option value="white">White</option>
+                  <option value="brz-white">Brz/White</option>
+                  <option value="tan">Tan</option>
+                  <option value="brz-tan">Brz/Tan</option>
+                  <option value="clay">Clay</option>
+                  <option value="brz-clay">Brz/Clay</option>
+                  <option value="bronze">Bronze</option>
+                </select>
+                <br>
+                <label for="glassStyle">Glass Style:</label>
+                <select name="glassStyle" id="glassStyle">
+                  <option value="clr-clr">Clr/Clr</option>
+                  <option value="clr-270">Clr/270</option>
+                  <option value="clr-366">Clr/366</option>
+                  <option value="clr-340">Clr/340</option>
+                </select>
+                <br>
+                <label for="igThickness">IG Thickness:</label>
+                <select name="igThickness" id="igThickness">
+                    <option value="7-16">7/16</option>
+                    <option value="1-2">1/2</option>
+                    <option value="5-8">5/8</option>
+                    <option value="3-4">3/4</option>
+                    <option value="1">1</option>
+                </select>
+                <br>
+                <label for="screen">Screen:</label>
+                <select name="screen" id="screen">
+                  <option value="blackWire">BlackWire</option>
+                  <option value="millWire">MillWire</option>
+                  <option value="Fiberglass">Fiberglass</option>
+                  <option value="None">None</option>
+                </select>
+                <br>
+                <label for="barStyle">Bar Style:</label>
+                <select name="barStyle" id="barStyle">
+                  <option value="none">None</option>
+                  <option value="regular">Regular</option>
+                  <option value="8x18Contour">8x18 Contour</option>
+                  <option value="8x25Contour">8x25 Contour</option>
+                  <option value="twoTone">Two Tone</option>
+                </select>
+                <br>
+                <br>
+                <button type="button" onclick="addToCart()">Add to Cart</button>
+            </div>
+        </fieldset>
+        <INPUT type="reset"><br>
+    </FORM>
+    <br>
+    <button href="#" onclick="changeStyle('blue.css');return false;" >Blue Theme</button> 
+    <br>
+    <button href="#" onclick="changeStyle('dark.css');return false;" >Dark Theme</button>
+    <br>
+    <button href="#" onclick="changeStyle('viking.css');return false;" >Viking Theme</button>
+    <br>
+    <button href="#" onclick="changeStyle('');return false;" >No Theme</button>
+    <br>
+    <button href="#" onclick="changeStyle('pro.css');return false;" >Pro Theme</button>
+    <br>
+    <button href="#" onclick="changeStyle('style.css');return false;" >Default Theme</button>
+    <br>
+    <br>
+    <table id="myTable">
+      <tr>
+        <th>Window Style</th>
+        <th>Frame Color</th>
+        <th>Glass Style</th>
+        <th>IG Thickness</th>
+        <th>Screen</th>
+        <th>Bar Style</th>
+      </tr>
+      <!-- <tr>
+        <td>Row1 cell1</td>
+        <td>Row1 cell2</td>
+        <td>Row1 cell3</td>
+        <td>Row1 cell4</td>
+        <td>Row1 cell5</td>
+        <td>Row1 cell6</td>
+      </tr> -->
+    </table>
+    <br>
+    
+    
+    <script>
+
+    // var skillsSelect = document.getElementById("newSkill");
+    // var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
+
+    var s_windowStyle = document.getElementById("frameColor");
+    var s_windowStyleText = s_windowStyle.options[s_windowStyle.selectedIndex].text;
+
+    var s_frameColor = document.getElementById("frameColor");
+    var s_frameColorText = s_frameColor.options[s_frameColor.selectedIndex].text;
+
+    var s_glassStyle = document.getElementById("glassStyle");
+    var s_glassStyleText = s_glassStyle.options[s_glassStyle.selectedIndex].text;
+
+    var s_igThickness = document.getElementById("igThickness");
+    var s_igThicknessText = s_igThickness.options[s_igThickness.selectedIndex].text;
+
+    var s_screen = document.getElementById("screen");
+    var s_screenText = s_screen.options[s_screen.selectedIndex].text;
+
+    var s_barStyle = document.getElementById("barStyle");
+    var s_barStyleText = s_barStyle.options[s_barStyle.selectedIndex].text;
+
+    function addToCart() {
+      var table = document.getElementById("myTable");
+      var row = table.insertRow(-1);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      var cell4 = row.insertCell(3);
+      var cell5 = row.insertCell(4);
+      var cell6 = row.insertCell(5);
+      // cell1.innerHTML = "NEW CELL1";
+      cell1.innerHTML = s_windowStyleText;
+      cell2.innerHTML = s_frameColorText;
+      cell3.innerHTML = s_glassStyleText;
+      cell4.innerHTML = s_igThicknessText;
+      cell5.innerHTML = s_screenText;
+      cell6.innerHTML = s_barStyleText;
+    }
+    </script>
+    
+    </body>
+
+</html>
