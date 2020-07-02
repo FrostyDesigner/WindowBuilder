@@ -10,12 +10,12 @@
   <meta name="author" content="TreeFrog">
 
   <link rel="stylesheet" href="style.css" id="stylesheet">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
 
   <!--
 
 <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
 <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
 <link rel="stylesheet" href="css/styles.css" />
 <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
@@ -49,11 +49,26 @@
           <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a>
           </li>
           <li class="nav-item"><a class="nav-link" href="customerDetails.html"><i class="fa fa-list fa-lg"></i>
-            Customer Details</a></li>
+              Customer Details</a></li>
           <li class="nav-item"><a class="nav-link" href="projectDetails.html"><i class="fa fa-address-card fa-lg"></i>
-            Project Details</a></li>
+              Project Details</a></li>
           <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i>
-            About</a></li>
+              About</a></li>
+
+          <div class="dropdown">
+            <button class="dropbtn">Styles
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#" onclick="changeStyle('blue.css');return false;">Blue Theme</a>
+              <a href="#" onclick="changeStyle('dark.css');return false;">Dark Theme</a>
+              <a href="#" onclick="changeStyle('viking.css');return false;">Viking Theme</a>
+              <a href="#" onclick="changeStyle('css\\pro.css');return false;">Pro Theme</a>
+              <a href="#" onclick="changeStyle('style.css');return false;">Default Theme</a>
+              <a href="#" onclick="changeStyle('');return false;">No Theme</a>
+            </div>
+          </div>
+
         </ul>
         <span class="navbar-text ml-auto">
           <a id="loginButton">
@@ -158,7 +173,7 @@
     </fieldset>
     <INPUT type="reset"><br>
   </FORM>
-  <br>
+  <!-- <br>
   <button href="#" onclick="changeStyle('blue.css');return false;">Blue Theme</button>
   <br>
   <button href="#" onclick="changeStyle('dark.css');return false;">Dark Theme</button>
@@ -167,10 +182,10 @@
   <br>
   <button href="#" onclick="changeStyle('');return false;">No Theme</button>
   <br>
-  <button href="#" onclick="changeStyle('pro.css');return false;">Pro Theme</button>
+  <button href="#" onclick="changeStyle('css\\pro.css');return false;">Pro Theme</button>
   <br>
   <button href="#" onclick="changeStyle('style.css');return false;">Default Theme</button>
-  <br>
+  <br> -->
   <br>
   <table id="myTable">
     <tr>
