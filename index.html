@@ -121,8 +121,12 @@ Hello world
       <legend>Window Build</legend>
       <div class="slidecontainer">
         <label for="windowStyle">Window Style: </label>
-        <input type="radio" name="windowStyle" value="ThermalBRK" /> ThermalBRK
-        <input type="radio" name="windowStyle" value="Vinyl" /> Vinyl
+        <select name="windowStyle" id="windowStyle">
+          <option value="ThermalBRK">ThermalBRK</option>
+          <option value="Vinyl">Vinyl</option>
+        </select>
+        <!-- <input type="radio" name="windowStyle" value="ThermalBRK" /> ThermalBRK -->
+        <!-- <input type="radio" name="windowStyle" value="Vinyl" /> Vinyl -->
         <br>
         <label for="frameColor">Frame Color:</label>
         <select name="frameColor" id="frameColor">
@@ -211,44 +215,58 @@ Hello world
 
 
   <script>
+    function getWindowStyle() {
+      var e = document.getElementById("windowStyle");
+      var result = e.options[e.selectedIndex].text;
+      return(result);
+    }
 
-    // var skillsSelect = document.getElementById("newSkill");
-    // var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
+    function getFrameColor() {
+      var e = document.getElementById("frameColor");
+      var result = e.options[e.selectedIndex].text;
+      return(result);
+    }
 
-    var s_windowStyle = document.getElementById("frameColor");
-    var s_windowStyleText = s_windowStyle.options[s_windowStyle.selectedIndex].text;
+    function getGlassStyle() {
+      var e = document.getElementById("glassStyle");
+      var result = e.options[e.selectedIndex].text;
+      return(result);
+    }
 
-    var s_frameColor = document.getElementById("frameColor");
-    var s_frameColorText = s_frameColor.options[s_frameColor.selectedIndex].text;
+    function getIgThickness() {
+      var e = document.getElementById("igThickness");
+      var result = e.options[e.selectedIndex].text;
+      return(result);
+    }
 
-    var s_glassStyle = document.getElementById("glassStyle");
-    var s_glassStyleText = s_glassStyle.options[s_glassStyle.selectedIndex].text;
+    function getScreen() {
+      var e = document.getElementById("screen");
+      var result = e.options[e.selectedIndex].value;
+      return(result);
+    }
 
-    var s_igThickness = document.getElementById("igThickness");
-    var s_igThicknessText = s_igThickness.options[s_igThickness.selectedIndex].text;
-
-    var s_screen = document.getElementById("screen");
-    var s_screenText = s_screen.options[s_screen.selectedIndex].text;
-
-    var s_barStyle = document.getElementById("barStyle");
-    var s_barStyleText = s_barStyle.options[s_barStyle.selectedIndex].text;
+    function getBarStyle() {
+      var e = document.getElementById("barStyle");
+      var result = e.options[e.selectedIndex].text;
+      return(result);
+    }
 
     function addToCart() {
       var table = document.getElementById("myTable");
       var row = table.insertRow(-1);
-      var cell1 = row.insertCell(0);
-      var cell2 = row.insertCell(1);
-      var cell3 = row.insertCell(2);
-      var cell4 = row.insertCell(3);
-      var cell5 = row.insertCell(4);
-      var cell6 = row.insertCell(5);
-      // cell1.innerHTML = "NEW CELL1";
-      cell1.innerHTML = s_windowStyleText;
-      cell2.innerHTML = s_frameColorText;
-      cell3.innerHTML = s_glassStyleText;
-      cell4.innerHTML = s_igThicknessText;
-      cell5.innerHTML = s_screenText;
-      cell6.innerHTML = s_barStyleText;
+      var cell0 = row.insertCell(0);
+      var cell1 = row.insertCell(1);
+      var cell2 = row.insertCell(2);
+      var cell3 = row.insertCell(3);
+      var cell4 = row.insertCell(4);
+      var cell5 = row.insertCell(5);
+      // cell0.innerHTML = "NEW CELL1";
+      cell0.innerHTML = getWindowStyle();
+      cell1.innerHTML = getFrameColor();
+      cell2.innerHTML = getGlassStyle();
+      cell3.innerHTML = getIgThickness();
+      cell4.innerHTML = getScreen();
+      cell5.innerHTML = getBarStyle();
     }
   </script>
 
