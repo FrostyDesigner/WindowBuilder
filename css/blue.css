@@ -1,23 +1,26 @@
-        fieldset{
+        fieldset {
             background-color: lightblue;
             border-color: darkblue;
             border-style: solid;
             border-width: 10px;
             border-radius: 20px;
         }
-        legend{
+
+        legend {
             color: white;
             font-weight: bold;
             background-color: darkblue;
             border-style: solid;
         }
+
         .left-block {
             background-color: red;
             text-transform: uppercase;
             color: white;
             padding: 3px;
         }
-        .right-block{
+
+        .right-block {
             background-color: purple;
             text-transform: uppercase;
             color: white;
@@ -25,9 +28,7 @@
         }
 
 
-        ********************* 
-        
-        .dropdown {
+        ********************* .dropdown {
             float: left;
             overflow: hidden;
         }
@@ -77,15 +78,20 @@
 
         .dropdown:hover .dropdown-content {
             display: block;
-        }  
-        
-        .imgcenter {                      
-            display: block;
-            margin-left: auto;
-            margin-right: auto;                        
         }
 
-        .navbarleft{
-            float: left;            
+        .imgcenter {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .navbarleft {
+            float: left;
             margin-left: 35px;
+        }
+
+        .site-footer {
+            background-image: linear-gradient(#CEC8FF, white);
+            padding: 20px 0px;
         }

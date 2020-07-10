@@ -9,7 +9,7 @@
   <title>Window Builder</title>
   <meta name="author" content="TreeFrog">
 
-  
+
 
   <!--
 
@@ -37,22 +37,25 @@ Hello world
     }
   </style>
 
-  <link rel="stylesheet" href="css\\blue.css" id="stylesheet"> <!--Makes Blue style the starting style-->
+  <link rel="stylesheet" href="css\\blue.css" id="stylesheet">
+  <!--Makes Blue style the starting style-->
   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
 
 
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-sm navbar-dark sticky-top">        
+  <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="#"><img class="imgcenter" src="img/logo.png" height="99" width="277" /></a> <!--updated logo size and centered on page IN BLUE THEME ONLY-->
+      <a class="navbar-brand" href="#"><img class="imgcenter" src="img/logo.png" height="99" width="277" /></a>
+      <!--updated logo size and centered on page IN BLUE THEME ONLY-->
       <!--<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>-->
       <div class="collapse navbar-collapse" id="nucampNavbar">
         <ul class="navbar-nav">
-          <li class="navbarleft"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a> <!--float navbar items left-->
+          <li class="navbarleft"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a>
+            <!--float navbar items left-->
           </li>
           <li class="navbarleft"><a class="nav-link" href="customerDetails.html"><i class="fa fa-list fa-lg"></i>
               Customer Details</a></li>
@@ -84,7 +87,8 @@ Hello world
     </div>
   </nav>
 
-  <p style="clear:both;"><br></p> <!--clear float left and adds break line-->
+  <p style="clear:both;"><br></p>
+  <!--clear float left and adds break line-->
 
   <FORM action="http://somesite.com/prog/adduser" method="post">
     <fieldset class="align-center">
@@ -227,37 +231,37 @@ Hello world
     function getWindowStyle() {
       var e = document.getElementById("windowStyle");
       var result = e.options[e.selectedIndex].text;
-      return(result);
+      return (result);
     }
 
     function getFrameColor() {
       var e = document.getElementById("frameColor");
       var result = e.options[e.selectedIndex].text;
-      return(result);
+      return (result);
     }
 
     function getGlassStyle() {
       var e = document.getElementById("glassStyle");
       var result = e.options[e.selectedIndex].text;
-      return(result);
+      return (result);
     }
 
     function getIgThickness() {
       var e = document.getElementById("igThickness");
       var result = e.options[e.selectedIndex].text;
-      return(result);
+      return (result);
     }
 
     function getScreen() {
       var e = document.getElementById("screen");
       var result = e.options[e.selectedIndex].value;
-      return(result);
+      return (result);
     }
 
     function getBarStyle() {
       var e = document.getElementById("barStyle");
       var result = e.options[e.selectedIndex].text;
-      return(result);
+      return (result);
     }
 
     function addToCart() {
@@ -278,6 +282,36 @@ Hello world
       cell5.innerHTML = getBarStyle();
     }
   </script>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-4 col-sm-2 offset-1">
+          <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Sites</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-sm-5 text-center">
+          <h5>Social</h5>
+          <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+          <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+          <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+          <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+        </div>
+        <div class="col-sm-4 text-center">
+          <a role="button" class="btn btn-link" href="tel:+13255551212"><i class="fa fa-phone"></i>
+            1-325-555-1212</a><br />
+          <a role="button" class="btn btn-link" href="mailto:windowBuilder@gmail.com"><i class="fa fa-envelope-o"></i>
+            windowBuilder@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
 
 </body>
 
