@@ -77,4 +77,15 @@
 
         .dropdown:hover .dropdown-content {
             display: block;
+        }  
+        
+        .imgcenter {                      
+            display: block;
+            margin-left: auto;
+            margin-right: auto;                        
+        }
+
+        .navbarleft{
+            float: left;            
+            margin-left: 35px;
         }
