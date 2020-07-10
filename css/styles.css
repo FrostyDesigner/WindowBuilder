@@ -24,21 +24,19 @@ header h2 {
 .jumbotron {
     margin: 0;
     padding: 30px;
-    /*background-image: linear-gradient(to right, #5637dd, #3046C5, #60106b); */
-    background-image: linear-gradient(to right, white, red, red, black);
-    /*background-image: linear-gradient(to right, white, yellow, orange, green, blue, brown,black); */
+    background-image: linear-gradient(to right, white, rgb(0, 162, 255), black);
     color: white;
+}
+
+.navbar {
+    background-image: linear-gradient(to right, white, gray, gray, black);
+    color: white
 }
 
 .row-content {
     padding: 50px 0;
     border-bottom: 1px ridge;
     min-height: 200px;
-}
-
-.navbar {
-    /*background-color: #901CAD; */
-    background-image: linear-gradient(to right, white, rgb(0, 162, 255), black);
 }
 
 .tab-content {
@@ -74,7 +72,6 @@ header h2 {
 .bgColor {
     background-color: red;
 }
-
 .yellowBelt {
     border-style: solid;
     border-color: yellow;

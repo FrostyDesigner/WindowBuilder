@@ -92,3 +92,17 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
+        .site-footer {
+            background-color: gray;
+            border-style: solid;
+            border-color: black;
+            background-image: gray;
+            padding: 20px 0px;
+            /* Apply centering to footer*/
+            display: block;
+            margin: 1.0em auto;
+            text-align: center;
+            width: 400px;
+            border-width: 10px;
+        }
