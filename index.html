@@ -9,20 +9,6 @@
   <title>Window Builder</title>
   <meta name="author" content="TreeFrog">
 
-
-
-  <!--
-
-<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-<link rel="stylesheet" href="css/styles.css" />
-<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
-
-Hello world
-
-  -->
-
   <script type="text/javascript">
     function changeStyle(url) {
       document.getElementById('stylesheet').href = url;
@@ -93,8 +79,11 @@ Hello world
   <FORM action="http://somesite.com/prog/adduser" method="post">
     <fieldset class="align-center">
       <legend>Customer Details</legend>
-      <LABEL for="name">Name: </LABEL>
-      <INPUT type="text" id="name" value="Matt LeBlanc">
+      <LABEL for="name_first">First Name: </LABEL>
+      <INPUT type="text" id="name_first" value="Matt">
+      <br>
+      <LABEL for="name_last">Last Name: </LABEL>
+      <INPUT type="text" id="name_last" value="LeBlanc">
       <br>
       <LABEL for="name">Address: </LABEL>
       <INPUT type="text" id="address" value="123 Elm St.">
@@ -108,9 +97,9 @@ Hello world
       <LABEL for="name">Zip: </LABEL>
       <INPUT type="text" id="zip" value="79602">
       <br>
-      <label for="date">Date: </label>
-      <input type="date" name="dob" id="dob">
-      <br>
+      <!-- <label for="date">Date: </label>
+      <input type="date" name="datetimepicker1" id="datetimepicker1">
+      <br> -->
       <br>
       <label>Contact Information:</label>
       <br>
@@ -126,6 +115,8 @@ Hello world
       <label for="phone">Phone</label>
       <input type="radio" id="email" name="contactPref" value="email">
       <label for="email">email</label>
+      <br>
+      <button type="button" onclick="addCustomerToDatabase()">Add Customer</button>
     </fieldset>
 
     <p style="clear:both;"><br></p>
@@ -190,22 +181,20 @@ Hello world
         <button type="button" onclick="addToCart()">Add to Cart</button>
       </div>
     </fieldset>
-    <INPUT type="reset"><br>
   </FORM>
-  <!-- <br>
-  <button href="#" onclick="changeStyle('blue.css');return false;">Blue Theme</button>
   <br>
-  <button href="#" onclick="changeStyle('dark.css');return false;">Dark Theme</button>
   <br>
-  <button href="#" onclick="changeStyle('viking.css');return false;">Viking Theme</button>
-  <br>
-  <button href="#" onclick="changeStyle('');return false;">No Theme</button>
-  <br>
-  <button href="#" onclick="changeStyle('css\\pro.css');return false;">Pro Theme</button>
-  <br>
-  <button href="#" onclick="changeStyle('style.css');return false;">Default Theme</button>
-  <br> -->
-  <br>
+  <h3 id=customerDatabase></h3>
+  <p id="db_name_f"></p>
+  <p id="db_name_l"></p>
+  <p id="db_address"></p>
+  <p id="db_city"></p>
+  <p id="db_state"></p>
+  <p id="db_zip"></p>
+  <p id="db_date"></p>
+  <p id="db_mobile"></p>
+  <p id="db_email"></p>
+
   <table id="myTable">
     <tr>
       <th>Window Style</th>
@@ -215,17 +204,8 @@ Hello world
       <th>Screen</th>
       <th>Bar Style</th>
     </tr>
-    <!-- <tr>
-        <td>Row1 cell1</td>
-        <td>Row1 cell2</td>
-        <td>Row1 cell3</td>
-        <td>Row1 cell4</td>
-        <td>Row1 cell5</td>
-        <td>Row1 cell6</td>
-      </tr> -->
   </table>
   <br>
-
 
   <script>
     function getWindowStyle() {
@@ -262,6 +242,76 @@ Hello world
       var e = document.getElementById("barStyle");
       var result = e.options[e.selectedIndex].text;
       return (result);
+    }
+
+    function getFirstName() {
+      var e = document.getElementById("name_first");
+      var result = e.value;
+      return (result);
+    }
+
+    function getLastName() {
+      var e = document.getElementById("name_last");
+      var result = e.value;
+      return (result);
+    }
+
+    function getAddress() {
+      var e = document.getElementById("address");
+      var result = e.value;
+      return (result);
+    }
+
+    function getCity() {
+      var e = document.getElementById("city");
+      var result = e.value;
+      return (result);
+    }
+
+    function getState() {
+      var e = document.getElementById("state");
+      var result = e.value;
+      return (result);
+    }
+
+    function getZip() {
+      var e = document.getElementById("zip");
+      var result = e.value;
+      return (result);
+    }
+
+    function getDate() {
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, '0');
+      var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+      var yyyy = today.getFullYear();
+      today = mm + '/' + dd + '/' + yyyy;
+      return (today);
+    }
+
+    function getMobile() {
+      var e = document.getElementById("mobile");
+      var result = e.value;
+      return (result);
+    }
+
+    function getEmail() {
+      var e = document.getElementById("email");
+      var result = e.value;
+      return (result);
+    }
+
+    function addCustomerToDatabase() {
+      document.getElementById("customerDatabase").innerHTML = "Customer Database";
+      document.getElementById("db_name_f").innerHTML = getFirstName();
+      document.getElementById("db_name_l").innerHTML = getLastName();
+      document.getElementById("db_address").innerHTML = getAddress();
+      document.getElementById("db_city").innerHTML = getCity();
+      document.getElementById("db_state").innerHTML = getState();
+      document.getElementById("db_zip").innerHTML = getZip();
+      document.getElementById("db_date").innerHTML = getDate();
+      document.getElementById("db_mobile").innerHTML = getMobile();
+      document.getElementById("db_email").innerHTML = getEmail();
     }
 
     function addToCart() {
