@@ -1,97 +1,100 @@
-        fieldset {
-            background-color: lightblue;
-            border-color: darkblue;
-            border-style: solid;
-            border-width: 10px;
-            border-radius: 20px;
-        }
+fieldset 
+{
+    background-color: lightblue;
+    border-color: darkblue;
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 20px;    
+}
 
-        legend {
-            color: white;
-            font-weight: bold;
-            background-color: darkblue;
-            border-style: solid;
-        }
+legend 
+{
+    color: white;
+    font-weight: bold;
+    background-color: darkblue;
+    border-style: solid;
+    width: 250px;
+}
 
-        .left-block {
-            background-color: red;
-            text-transform: uppercase;
-            color: white;
-            padding: 3px;
-        }
+.left-block {
+    background-color: red;
+    text-transform: uppercase;
+    color: white;
+    padding: 3px;
+}
 
-        .right-block {
-            background-color: purple;
-            text-transform: uppercase;
-            color: white;
-            padding: 3px;
-        }
+.right-block {
+    background-color: purple;
+    text-transform: uppercase;
+    color: white;
+    padding: 3px;
+}
 
 
-        ********************* .dropdown {
-            float: left;
-            overflow: hidden;
-        }
+********************* .dropdown {
+    float: left;
+    overflow: hidden;
+}
 
-        .dropdown .dropbtn {
-            /* font-size: 16px; */
-            font-size: inherit;
-            /* border: none; */
-            border: inherit;
-            /* outline: none; */
-            outline: inherit;
-            /* color: white; */
-            color: inherit;
-            /* padding: 14px 16px; */
-            padding: inherit;
-            background-color: inherit;
-            font-family: inherit;
-            margin: 0;
-        }
+.dropdown .dropbtn {
+    /* font-size: 16px; */
+    font-size: inherit;
+    /* border: none; */
+    border: inherit;
+    /* outline: none; */
+    outline: inherit;
+    /* color: white; */
+    color: inherit;
+    /* padding: 14px 16px; */
+    padding: inherit;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
 
-        .navbar a:hover,
-        .dropdown:hover .dropbtn {
-            background-color: red;
-        }
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: red;
+}
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
 
-        .dropdown-content a {
-            float: none;
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
 
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
-        .imgcenter {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
+.imgcenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-        .navbarleft {
-            float: left;
-            margin-left: 35px;
-        }
+.navbarleft {
+    float: left;
+    margin-left: 35px;
+}
 
-        .site-footer {
-            background-image: linear-gradient(#CEC8FF, white);
-            padding: 20px 0px;
-        }
+.site-footer {
+    background-image: linear-gradient(#CEC8FF, white);
+    padding: 20px 0px;
+}
