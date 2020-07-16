@@ -1,0 +1,19 @@
+body 
+{
+    background-color: #1e1e1e;        
+}
+fieldset 
+{
+    background-color: #252526;
+    border-color: #333333;    
+}
+label
+{
+    color: #daab66;
+}
+input
+{
+    background-color: #545455;
+    color: #d6e0e7;
+    border: 0px;
+}
