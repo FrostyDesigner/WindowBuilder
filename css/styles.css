@@ -5,7 +5,8 @@ table, td, th
 
 body 
 {
-    font-family: 'Ubuntu', sans-serif;        
+    font-family: 'Ubuntu', sans-serif;  
+    background-color: #d3d3d3;          
 }
 
 .img-center 
@@ -82,8 +83,9 @@ body
 
 fieldset 
 {
-    background-color: white;
-    border-color: #3f6673;
+    background-color: rgb(49, 49, 49);
+    color: #54c454;
+    border-color: #7c683c;
     border-style: solid;
     border-width: 10px;
     border-radius: 20px;    
@@ -100,6 +102,13 @@ legend
     width: 250px;
     padding-left: 20px;
     margin-left: 20px;
+}
+
+input
+{
+    background-color: #457040;
+    color: #29cc4c;
+    border: 0px;
 }
 
 .site-footer 
