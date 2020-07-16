@@ -5,7 +5,7 @@ table, td, th
 
 body 
 {
-    font-family: 'Ubuntu', sans-serif;    
+    font-family: 'Ubuntu', sans-serif;        
 }
 
 .img-center 
@@ -28,22 +28,14 @@ body
     color: white
 }
 
-.dropdown 
-{
-    float: left;
-    overflow: hidden;
-}
-
 .dropdown .dropbtn 
 {    
     font-size: inherit;    
     border: inherit;    
     outline: inherit;    
-    color: inherit;
-    padding: inherit;
+    color: inherit;    
     background-color: inherit;
-    font-family: inherit;
-    margin: 0;
+    font-family: inherit;    
 }
 
 .dropdown-content 
@@ -76,27 +68,56 @@ body
     display: block;
 }
 
+.navbarleft 
+{
+    float: left;
+    margin-left: 35px;
+}
+
+.navbarright
+{
+    float: right;
+    margin-left: 35px;
+}
+
+fieldset 
+{
+    background-color: white;
+    border-color: #3f6673;
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 20px;    
+    margin: 50px 50px 0px 50px;
+    padding: 10px;
+}
+
+legend 
+{
+    color: white;
+    font-weight: bold;
+    background-color: #3f6673;
+    border-style: solid;
+    width: 250px;
+    padding-left: 20px;
+    margin-left: 20px;
+}
+
+.site-footer 
+{
+    background-color: #3f6673;    
+    padding: 20px 0px;
+}
+
 
 
 
 /*
 
-
-
-h2 {
-    color: red;
+.dropdown 
+{
+    float: left;
+    overflow: hidden;
 }
-
-header h2 {
-    color: #CEC8FF;
-}
-
-.site-footer {
-    background-image: linear-gradient(#CEC8FF, white);
-    padding: 20px 0px;
-}
-
-
 
 
 
