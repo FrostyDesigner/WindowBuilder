@@ -1,12 +1,87 @@
-body {
-    font-family: 'Ubuntu', sans-serif;
+table, td, th 
+{
+    border: 1px solid black;
 }
 
-h1,
-h2,
-h3 {
-    font-family: 'Ubuntu', sans-serif;
+body 
+{
+    font-family: 'Ubuntu', sans-serif;    
 }
+
+.img-center 
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.jumbotron 
+{
+    margin: 0;
+    padding: 30px;
+    background-color: #dcc98a;      
+}
+
+.navbar 
+{
+    background-color: #3f6673;    
+    color: white
+}
+
+.dropdown 
+{
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn 
+{    
+    font-size: inherit;    
+    border: inherit;    
+    outline: inherit;    
+    color: inherit;
+    padding: inherit;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a 
+{
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover 
+{
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content 
+{
+    display: block;
+}
+
+
+
+
+/*
+
+
 
 h2 {
     color: red;
@@ -21,17 +96,9 @@ header h2 {
     padding: 20px 0px;
 }
 
-.jumbotron {
-    margin: 0;
-    padding: 30px;
-    background-image: linear-gradient(to right, white, rgb(0, 162, 255), black);
-    color: white;
-}
 
-.navbar {
-    background-image: linear-gradient(to right, white, gray, gray, black);
-    color: white
-}
+
+
 
 .row-content {
     padding: 50px 0;
@@ -101,3 +168,4 @@ header h2 {
     border-style: dashed;
     border-color: purple;
 }
+*/

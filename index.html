@@ -6,11 +6,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap and font-awesome CSS -->
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+  
+  <!--Base css file -->
   <link rel="stylesheet" href="css/styles.css" />
+
+  <!--Makes Blue style the starting style -->
+  <link rel="stylesheet" href="css\\blue.css" id="stylesheet">
+  
   <!-- endbuild -->
 
   <title>Window Builder</title>
@@ -22,32 +28,19 @@
     }
   </script>
 
-  <style>
-    table,
-    td,
-    th {
-      border: 1px solid black;
-    }
-  </style>
-
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-
-  <link rel="stylesheet" href="css\\blue.css" id="stylesheet">
-  <!--Makes Blue style the starting style- test -->
-  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
 </head>
 
+
+
 <body>
-  <header class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <div class="row">
-        <div class="col-4 col-sm-3 col-md-2 align-self-center">
-          <a href="index.html"><img src="img/logo.png" class="img-fluid" /></a>
-        </div>
-        <div class="col">
-          <h1>Airtite Windows</h1>
-        </div>
-      </div>
+
+  <header class="jumbotron">
+    <div class="container">      
+
+      <div>
+        <a href="index.html"><img src="img/logo.png" class="img-center" width="277" height="99"/></a>
+      </div>       
+      
     </div>
   </header>
 
@@ -55,29 +48,30 @@
     <div class="container">
       <!-- <a class="navbar-brand" href="#"><img class="imgcenter" src="img/logo.png" height="99" width="277" /></a> -->
       <!--updated logo size and centered on page IN BLUE THEME ONLY-->
+      
       <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="nucampNavbar">
         <ul class="navbar-nav">
-          <li class="navbarleft">
-            <a class="nav-link" href="#">
-              <i class="fa fa-home fa-lg"></i> Home
-            </a>
+
+          <li class="navbarleft">            
+            <a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a>
           </li>
-          <li class="navbarleft dropdown">
-            <a class="nav-link">
-              <button class="dropbtn">Styles
-                <i class="fa fa-lg fa-caret-down"></i>
-              </button>
+
+          <li class="navbarleft dropdown">            
+            <a class="nav-link"><button class="dropbtn">Styles<i class="fa fa-lg fa-caret-down"></i></button>
               <div class="dropdown-content">
                 <a href="#" onclick="changeStyle('css\\styles.css');return false;">Default Theme</a>
                 <a href="#" onclick="changeStyle('css\\blue.css');return false;">Blue Theme</a>
               </div>
             </a>
           </li>
+
         </ul>
       </div>
+      
     </div>
   </nav>
 
