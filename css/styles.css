@@ -117,85 +117,52 @@ input
     padding: 20px 0px;
 }
 
+/* table styling */
 
-
-
-/*
-
-.dropdown 
-{
-    float: left;
-    overflow: hidden;
-}
-
-
-
-.row-content {
-    padding: 50px 0;
-    border-bottom: 1px ridge;
-    min-height: 200px;
-}
-
-.tab-content {
-    border: 1px solid #DDD;
-    border-top: none;
-    padding: 10px;
-}
-
-.carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.carousel {
-    border: solid #5637dd;
-}
-
-#carouselButton {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-
-#reserveModal .modal-header {
-    background-color: #17A2B8;
+#windowList {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #windowList td, #windowList th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #windowList tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #windowList tr:hover {background-color: #ddd;}
+  
+  #windowList th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #54c454;
     color: white;
-}
+  }
+  
+  #custInfo {
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    #custInfo td, #custInfo th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #custInfo tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #custInfo tr:hover {background-color: #ddd;}
+    
+    #custInfo th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #54c454;
+      color: white;
+    }
 
-#loginModal .modal-header {
-    background-color: #901CAD;
-    color: white;
-}
-
-.bgColor {
-    background-color: red;
-}
-.yellowBelt {
-    border-style: solid;
-    border-color: yellow;
-}
-
-.orangeBelt {
-    border-style: solid;
-    border-color: orange;
-}
-
-.greenBelt {
-    border-style: solid;
-    border-color: green;
-}
-
-.blueBelt {
-    border-style: solid;
-    border-color: blue;
-}
-
-.brownBelt {
-    border-style: solid;
-    border-color: brown;
-}
-
-.purpleBelt {
-    border-style: dashed;
-    border-color: purple;
-}
-*/
+/* end table styling */
