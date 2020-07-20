@@ -10,13 +10,13 @@
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-  
+
   <!--Base css file -->
   <link rel="stylesheet" href="css/styles.css" />
 
   <!--Makes Blue style the starting style -->
   <link rel="stylesheet" href="css\\blue.css" id="stylesheet">
-  
+
   <!-- endbuild -->
 
   <title>Window Builder</title>
@@ -28,6 +28,9 @@
     }
   </script>
 
+  <script src="scripts\customer.js"></script>
+  <script src="scripts/windowList.js"></script>
+
 </head>
 
 
@@ -35,18 +38,18 @@
 <body>
 
   <header class="jumbotron">
-    <div class="container">      
+    <div class="container">
 
       <div>
-        <a href="index.html"><img src="img/logo.png" class="img-center" width="277" height="99"/></a>
-      </div>       
-      
+        <a href="index.html"><img src="img/logo.png" class="img-center" width="277" height="99" /></a>
+      </div>
+
     </div>
   </header>
 
   <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
-    <div class="container">     
-      
+    <div class="container">
+
       <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -54,11 +57,11 @@
       <div class="collapse navbar-collapse" id="nucampNavbar">
         <ul class="navbar-nav">
 
-          <li class="navbarleft">            
+          <li class="navbarleft">
             <a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a>
           </li>
 
-          <li class="navbarright dropdown">            
+          <li class="navbarright dropdown">
             <a class="nav-link"><button class="dropbtn">Styles<i class="fa fa-lg fa-caret-down"></i></button>
               <div class="dropdown-content">
                 <a href="#" onclick="changeStyle('css\\styles.css');return false;">Default Theme</a>
@@ -70,7 +73,7 @@
 
         </ul>
       </div>
-      
+
     </div>
   </nav>
 
@@ -81,32 +84,34 @@
   <FORM action="http://somesite.com/prog/adduser" method="post">
     <fieldset class="align-center">
       <legend>Customer Details</legend>
+      <label>Customer Information:</label>
+      <br>
       <LABEL for="name_first">First Name: </LABEL>
       <INPUT type="text" id="name_first" value="Matt">
       <br>
       <LABEL for="name_last">Last Name: </LABEL>
       <INPUT type="text" id="name_last" value="LeBlanc">
       <br>
-      <LABEL for="name">Address: </LABEL>
+      <LABEL for="address">Address: </LABEL>
       <INPUT type="text" id="address" value="123 Elm St.">
       <br>
-      <LABEL for="name">City: </LABEL>
+      <LABEL for="city">City: </LABEL>
       <INPUT type="text" id="city" value="Abilene">
       <br>
-      <LABEL for="name">State: </LABEL>
+      <LABEL for="state">State: </LABEL>
       <INPUT type="text" id="state" value="TX">
       <br>
-      <LABEL for="name">Zip: </LABEL>
+      <!-- <LABEL for="name">Zip: </LABEL>
       <INPUT type="text" id="zip" value="79602">
-      <br>
+      <br> -->
       <!-- <label for="date">Date: </label>
       <input type="date" name="datetimepicker1" id="datetimepicker1">
       <br> -->
       <br>
       <label>Contact Information:</label>
       <br>
-      <LABEL for="mobile">Mobile: </LABEL>
-      <INPUT type="text" id="mobile" value="(555) 555-1234">
+      <LABEL for="phone">Phone: </LABEL>
+      <INPUT type="text" id="phone" value="(555) 555-1234">
       <br>
       <LABEL for="email">Email: </LABEL>
       <INPUT type="text" id="email" value="tricksy@gmail.com">
@@ -147,8 +152,8 @@
         <select name="glassStyle" id="glassStyle">
           <option value="clr-clr">Clr/Clr</option>
           <option value="clr-270">Clr/270</option>
-          <option value="clr-366">Clr/366</option>
           <option value="clr-340">Clr/340</option>
+          <option value="clr-366">Clr/366</option>
         </select>
         <br>
         <label for="igThickness">IG Thickness:</label>
@@ -185,17 +190,20 @@
   <br>
   <br>
   <h3 id=customerDatabase></h3>
-  <p id="db_name_f"></p>
-  <p id="db_name_l"></p>
-  <p id="db_address"></p>
-  <p id="db_city"></p>
-  <p id="db_state"></p>
-  <p id="db_zip"></p>
-  <p id="db_date"></p>
-  <p id="db_mobile"></p>
-  <p id="db_email"></p>
-
-  <table id="myTable">
+  <table id="custInfo">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Phone</th>
+      <th>Email</th>
+    </tr>
+  </table>
+  <br>
+  <h3 id=windowBuildTable></h3>
+  <table id="windowList">
     <tr>
       <th>Window Style</th>
       <th>Frame Color</th>
@@ -207,132 +215,6 @@
   </table>
   <br>
 
-  <script>
-    function getWindowStyle() {
-      var e = document.getElementById("windowStyle");
-      var result = e.options[e.selectedIndex].text;
-      return (result);
-    }
-
-    function getFrameColor() {
-      var e = document.getElementById("frameColor");
-      var result = e.options[e.selectedIndex].text;
-      return (result);
-    }
-
-    function getGlassStyle() {
-      var e = document.getElementById("glassStyle");
-      var result = e.options[e.selectedIndex].text;
-      return (result);
-    }
-
-    function getIgThickness() {
-      var e = document.getElementById("igThickness");
-      var result = e.options[e.selectedIndex].text;
-      return (result);
-    }
-
-    function getScreen() {
-      var e = document.getElementById("screen");
-      var result = e.options[e.selectedIndex].value;
-      return (result);
-    }
-
-    function getBarStyle() {
-      var e = document.getElementById("barStyle");
-      var result = e.options[e.selectedIndex].text;
-      return (result);
-    }
-
-    function getFirstName() {
-      var e = document.getElementById("name_first");
-      var result = e.value;
-      return (result);
-    }
-
-    function getLastName() {
-      var e = document.getElementById("name_last");
-      var result = e.value;
-      return (result);
-    }
-
-    function getAddress() {
-      var e = document.getElementById("address");
-      var result = e.value;
-      return (result);
-    }
-
-    function getCity() {
-      var e = document.getElementById("city");
-      var result = e.value;
-      return (result);
-    }
-
-    function getState() {
-      var e = document.getElementById("state");
-      var result = e.value;
-      return (result);
-    }
-
-    function getZip() {
-      var e = document.getElementById("zip");
-      var result = e.value;
-      return (result);
-    }
-
-    function getDate() {
-      var today = new Date();
-      var dd = String(today.getDate()).padStart(2, '0');
-      var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-      var yyyy = today.getFullYear();
-      today = mm + '/' + dd + '/' + yyyy;
-      return (today);
-    }
-
-    function getMobile() {
-      var e = document.getElementById("mobile");
-      var result = e.value;
-      return (result);
-    }
-
-    function getEmail() {
-      var e = document.getElementById("email");
-      var result = e.value;
-      return (result);
-    }
-
-    function addCustomerToDatabase() {
-      document.getElementById("customerDatabase").innerHTML = "Customer Database";
-      document.getElementById("db_name_f").innerHTML = getFirstName();
-      document.getElementById("db_name_l").innerHTML = getLastName();
-      document.getElementById("db_address").innerHTML = getAddress();
-      document.getElementById("db_city").innerHTML = getCity();
-      document.getElementById("db_state").innerHTML = getState();
-      document.getElementById("db_zip").innerHTML = getZip();
-      document.getElementById("db_date").innerHTML = getDate();
-      document.getElementById("db_mobile").innerHTML = getMobile();
-      document.getElementById("db_email").innerHTML = getEmail();
-    }
-
-    function addToCart() {
-      var table = document.getElementById("myTable");
-      var row = table.insertRow(-1);
-      var cell0 = row.insertCell(0);
-      var cell1 = row.insertCell(1);
-      var cell2 = row.insertCell(2);
-      var cell3 = row.insertCell(3);
-      var cell4 = row.insertCell(4);
-      var cell5 = row.insertCell(5);
-      // cell0.innerHTML = "NEW CELL1";
-      cell0.innerHTML = getWindowStyle();
-      cell1.innerHTML = getFrameColor();
-      cell2.innerHTML = getGlassStyle();
-      cell3.innerHTML = getIgThickness();
-      cell4.innerHTML = getScreen();
-      cell5.innerHTML = getBarStyle();
-    }
-  </script>
-
   <footer class="site-footer">
     <div class="container">
       <div class="row">
@@ -340,9 +222,9 @@
           <h5>Links</h5>
           <ul class="list-unstyled">
             <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <!-- <li><a href="#">About</a></li>
             <li><a href="#">Sites</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Contact</a></li> -->
           </ul>
         </div>
         <div class="col-6 col-sm-5 text-center">
@@ -371,7 +253,7 @@
   <script src="js/scripts.js"></script>
   <!-- endbuild -->
 
-  
+
 
 </body>
 
