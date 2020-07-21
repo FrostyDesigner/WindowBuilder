@@ -28,7 +28,7 @@
     }
   </script>
 
-  <script src="scripts\customer.js"></script>
+  <script src="scripts/customer.js"></script>
   <script src="scripts/windowList.js"></script>
 
 </head>
@@ -37,7 +37,7 @@
 
 <body>
 
-  <header class="jumbotron">
+  <header class="jumbotron sticky-top">
     <div class="container">
 
       <div>
@@ -45,37 +45,41 @@
       </div>
 
     </div>
+  
+
+    <nav class="navbar navbar-expand-sm navbar-dark">
+      <div class="container">
+
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nucampNavbar">
+          <ul class="navbar-nav">
+
+            <li class="navbarleft">
+              <a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a>
+            </li>
+
+            <li class="navbarright dropdown">
+              <a class="nav-link"><button class="dropbtn">Styles<i class="fa fa-lg fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                  <a href="#" onclick="changeStyle('css\\styles.css');return false;">Default Theme</a>
+                  <a href="#" onclick="changeStyle('css\\blue.css');return false;">Blue Theme</a>
+                  <a href="#" onclick="changeStyle('css\\dark.css');return false;">Dark Theme</a>
+                </div>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </nav>
   </header>
 
-  <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
-    <div class="container">
-
-      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="nucampNavbar">
-        <ul class="navbar-nav">
-
-          <li class="navbarleft">
-            <a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a>
-          </li>
-
-          <li class="navbarright dropdown">
-            <a class="nav-link"><button class="dropbtn">Styles<i class="fa fa-lg fa-caret-down"></i></button>
-              <div class="dropdown-content">
-                <a href="#" onclick="changeStyle('css\\styles.css');return false;">Default Theme</a>
-                <a href="#" onclick="changeStyle('css\\blue.css');return false;">Blue Theme</a>
-                <a href="#" onclick="changeStyle('css\\dark.css');return false;">Dark Theme</a>
-              </div>
-            </a>
-          </li>
-
-        </ul>
-      </div>
-
-    </div>
-  </nav>
+  <br>
+  <br>
 
   <!--
   <p style="clear:both;"><br></p>
@@ -83,7 +87,10 @@
 
   <FORM action="http://somesite.com/prog/adduser" method="post">
     <fieldset class="align-center">
+ 
       <legend>Customer Details</legend>
+      <br>
+
       <label>Customer Information:</label>
       <br>
       <LABEL for="name_first">First Name: </LABEL>
@@ -100,14 +107,10 @@
       <br>
       <LABEL for="state">State: </LABEL>
       <INPUT type="text" id="state" value="TX">
+      <br>     
       <br>
-      <!-- <LABEL for="name">Zip: </LABEL>
-      <INPUT type="text" id="zip" value="79602">
-      <br> -->
-      <!-- <label for="date">Date: </label>
-      <input type="date" name="datetimepicker1" id="datetimepicker1">
-      <br> -->
-      <br>
+
+
       <label>Contact Information:</label>
       <br>
       <LABEL for="phone">Phone: </LABEL>
@@ -117,19 +120,25 @@
       <INPUT type="text" id="email" value="tricksy@gmail.com">
       <br>
       <br>
+
+      
       <label>Preferred method of contact:</label>
       <input type="radio" id="phone" name="contactPref" value="phone">
       <label for="phone">Phone</label>
       <input type="radio" id="email" name="contactPref" value="email">
       <label for="email">email</label>
       <br>
-      <button type="button" onclick="addCustomerToDatabase()">Add Customer</button>
+      <br>
+      <button class="img-center" type="button" onclick="addCustomerToDatabase()">Add Customer</button>
     </fieldset>
 
+    <!--
     <p style="clear:both;"><br></p>
+    clear float left and adds break line-->
 
     <fieldset class="align-center">
       <legend>Window Build</legend>
+      <br>
       <div class="slidecontainer">
         <label for="windowStyle">Window Style: </label>
         <select name="windowStyle" id="windowStyle">
@@ -183,7 +192,7 @@
         </select>
         <br>
         <br>
-        <button type="button" onclick="addToCart()">Add to Cart</button>
+        <button class="img-center" type="button" onclick="addToCart()">Add to Cart</button>
       </div>
     </fieldset>
   </FORM>
@@ -221,10 +230,7 @@
         <div class="col-4 col-sm-2 offset-1">
           <h5>Links</h5>
           <ul class="list-unstyled">
-            <li><a href="#">Home</a></li>
-            <!-- <li><a href="#">About</a></li>
-            <li><a href="#">Sites</a></li>
-            <li><a href="#">Contact</a></li> -->
+            <li><a href="#">Home</a></li>            
           </ul>
         </div>
         <div class="col-6 col-sm-5 text-center">
@@ -246,14 +252,10 @@
   </footer>
 
   <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
-  <!-- build:js js/main.js -->
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="js/scripts.js"></script>
   <!-- endbuild -->
-
-
 
 </body>
 
