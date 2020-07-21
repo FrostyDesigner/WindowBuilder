@@ -18,14 +18,16 @@ body
 
 .jumbotron 
 {
-    margin: 0;
-    padding: 30px;
+    margin: 0;    
+    padding: 0px;
+    height: 100px;
     background-color: #dcc98a;      
 }
 
 .navbar 
 {
     background-color: #3f6673;    
+    padding: 0px;
     color: white
 }
 
