@@ -6,7 +6,7 @@ table, td, th
 body 
 {
     font-family: 'Ubuntu', sans-serif;  
-    background-color: #d3d3d3;          
+    background-color: #f0f0f0;          
 }
 
 .img-center 
@@ -84,22 +84,27 @@ body
 }
 
 fieldset 
-{
-    background-color: rgb(49, 49, 49);
-    color: #54c454;
-    border-color: #7c683c;
+{    
+    float: left;
+    background-color: #e3edf1;
+    font-weight: bold;
+    color: #3f6673;
+    border-color: #3f6673;
     border-style: solid;
     border-width: 10px;
     border-radius: 20px;    
     margin: 50px 50px 0px 50px;
     padding: 10px;
+    min-width: 400px;
 }
 
 legend 
 {
-    color: white;
+    color: #3f6673;
+    border-color: #3f6673;
+    border-width: 10px;
     font-weight: bold;
-    background-color: #3f6673;
+    background-color: #ffffff;
     border-style: solid;
     width: 250px;
     padding-left: 20px;
@@ -108,9 +113,19 @@ legend
 
 input
 {
-    background-color: #457040;
-    color: #29cc4c;
+    float: right;
+    background-color: #ffffff;
+    color: #3f6673;
     border: 0px;
+}
+
+select
+{
+    background-color: #ffffff;
+    color: #3f6673;
+    float: right;
+    width: 150px;
+    direction: rtl;
 }
 
 .site-footer 
@@ -140,7 +155,7 @@ input
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #54c454;
+    background-color: #7090bf;
     color: white;
   }
   
@@ -163,7 +178,7 @@ input
       padding-top: 12px;
       padding-bottom: 12px;
       text-align: left;
-      background-color: #54c454;
+      background-color: #7090bf;
       color: white;
     }
 
