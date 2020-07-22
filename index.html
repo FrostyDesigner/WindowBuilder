@@ -37,7 +37,7 @@
 
 <body>
 
-  <header class="jumbotron sticky-top">
+  <header class="jumbotron sticky-top">     
     <div class="container">
 
       <div>
@@ -45,9 +45,9 @@
       </div>
 
     </div>
-  
 
     <nav class="navbar navbar-expand-sm navbar-dark">
+
       <div class="container">
 
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
@@ -92,15 +92,15 @@
       <br>
       <LABEL for="name_first">First Name: </LABEL>
       <br>
-      <INPUT type="text" id="name_first" value="Matt">
+      <INPUT type="text" id="name_first" value="">
       <br>
       <LABEL for="name_last">Last Name: </LABEL>
       <br>
-      <INPUT type="text" id="name_last" value="LeBlanc">
+      <INPUT type="text" id="name_last" value="">
       <br>
       <LABEL for="address">Address: </LABEL>
       <br>
-      <INPUT type="text" id="address" value="123 Elm St.">
+      <INPUT type="text" id="address" value="">
       <br>
       <LABEL for="city">City: </LABEL>
       <br>
@@ -117,11 +117,16 @@
       <br>
       <LABEL for="phone">Phone: </LABEL>
       <br>
-      <INPUT type="text" id="phone" value="(555) 555-1234">
+      <INPUT type="text" id="phone" value="">
       <br>
       <LABEL for="email">Email: </LABEL>
       <br>
-      <INPUT type="text" id="email" value="tricksy@gmail.com">
+      <INPUT type="text" id="email" value="">
+      <br>
+      <br>
+      <LABEL for="contactnotes">Notes: </LABEL>
+      <br>
+      <INPUT type="text" id="contactnotes" value="">
       <br>
       <br>
 
@@ -143,7 +148,7 @@
     clear float left and adds break line-->
 
     <fieldset class="align-center">
-      <legend>Window Build</legend>
+      <legend>Window Specs</legend>
       <br>
       <div class="slidecontainer">
         <label for="windowStyle">Window Style: </label>
@@ -198,8 +203,45 @@
         </select>
         <br>
         <br>
+        <LABEL for="specnotes">Notes: </LABEL>
+        <br>
+        <INPUT type="text" id="specnotes" value="">
+        <br>
+        <br>
+        <br>
+
+
         <button class="img-center" type="button" onclick="addToCart()">Add to Cart</button>
       </div>
+    </fieldset>
+
+    <fieldset class="align-center">
+ 
+      <legend>Window Build</legend>
+      <br>
+      <LABEL for="qty">Qty: </LABEL>
+      <br>
+      <INPUT type="text" id="qty" value="">
+      <br>
+      <LABEL for="window_width">Width: </LABEL>
+      <br>
+      <INPUT type="text" id="window_width" value="">
+      <br>
+      <LABEL for="window_height">Height: </LABEL>
+      <br>
+      <INPUT type="text" id="window_height" value="">
+      <br>
+
+
+
+
+      <LABEL for="window_notes">Notes: </LABEL>
+      <br>
+      <INPUT type="text" id="window_notes" value="">
+      <br>      
+      <br>
+      <br>
+      <button class="img-center" type="button" onclick="addCustomerToDatabase()">Add Window</button>
     </fieldset>
   </FORM>
   
