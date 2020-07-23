@@ -121,6 +121,11 @@ input
     width: 150px;    
 }
 
+.mycheckbox
+{
+    width: 20px;
+}
+
 select
 {
     background-color: #ffffff;
