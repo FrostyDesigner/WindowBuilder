@@ -91,23 +91,18 @@
       <legend>Customer Details</legend>
       <br>
       <LABEL for="name_first">First Name: </LABEL>
-      <br>
       <INPUT type="text" id="name_first" value="">
-      <br>
+      <br>      
       <LABEL for="name_last">Last Name: </LABEL>
-      <br>
       <INPUT type="text" id="name_last" value="">
       <br>
-      <LABEL for="address">Address: </LABEL>
-      <br>
+      <LABEL for="address">Address: </LABEL>      
       <INPUT type="text" id="address" value="">
       <br>
-      <LABEL for="city">City: </LABEL>
-      <br>
+      <LABEL for="city">City: </LABEL>      
       <INPUT type="text" id="city" value="Abilene">
       <br>
-      <LABEL for="state">State: </LABEL>
-      <br>
+      <LABEL for="state">State: </LABEL>      
       <INPUT type="text" id="state" value="TX">
       <br>     
       <br>
@@ -115,17 +110,14 @@
 
       <label><u>Contact Information</u></label>
       <br>
-      <LABEL for="phone">Phone: </LABEL>
-      <br>
+      <LABEL for="phone">Phone: </LABEL>      
       <INPUT type="text" id="phone" value="">
       <br>
-      <LABEL for="email">Email: </LABEL>
-      <br>
+      <LABEL for="email">Email: </LABEL>      
       <INPUT type="text" id="email" value="">
       <br>
       <br>
-      <LABEL for="contactnotes">Notes: </LABEL>
-      <br>
+      <LABEL for="contactnotes">Notes: </LABEL>      
       <INPUT type="text" id="contactnotes" value="">
       <br>
       <br>
@@ -203,8 +195,7 @@
         </select>
         <br>
         <br>
-        <LABEL for="specnotes">Notes: </LABEL>
-        <br>
+        <LABEL for="specnotes">Notes: </LABEL>        
         <INPUT type="text" id="specnotes" value="">
         <br>
         <br>
@@ -219,24 +210,73 @@
  
       <legend>Window Build</legend>
       <br>
-      <LABEL for="qty">Qty: </LABEL>
-      <br>
+      <LABEL for="qty">Qty: </LABEL>      
       <INPUT type="text" id="qty" value="">
       <br>
-      <LABEL for="window_width">Width: </LABEL>
-      <br>
+      <LABEL for="window_width">Width: </LABEL>      
       <INPUT type="text" id="window_width" value="">
       <br>
-      <LABEL for="window_height">Height: </LABEL>
-      <br>
+      <LABEL for="window_height">Height: </LABEL>      
       <INPUT type="text" id="window_height" value="">
       <br>
-
-
-
-
-      <LABEL for="window_notes">Notes: </LABEL>
       <br>
+
+      <input type="checkbox" id="longpoint" name="longpoint" value="Longpoint">
+      <label for="longpoint"> Long point (Outside dimension)</label><br>
+
+      <input type="checkbox" id="flatsill" name="flatsill" value="Flatsill">
+      <label for="flatsill"> Flat Sill</label><br>
+
+      <br>
+
+      <div class="slidecontainer">
+        <label for="windowType">Window Type: </label>
+          <select name="windowType" id="windowType">
+            <option value="single_hung">Single Hung</option>
+            <option value="fixed">Fixed</option>    
+            <option value="slider">Slider</option>      
+          </select>
+        <br>
+        <label for="temp_glass">Tempered Glass: </label>
+          <select name="temp_glass" id="temp_glass">
+            <option value="no_temp">None</option>
+            <option value="all_temp">Tempered</option>    
+            <option value="bot_temp">Bottom Tempered</option>      
+          </select>
+        <br>
+        <label for="obscure_glass">Obscures Glass: </label>
+          <select name="obscure_glass" id="obscure_glass">
+            <option value="no_obscure">None</option>
+            <option value="all_obscure_p62">P62</option>    
+            <option value="all_obscure_rain">Rain</option>     
+            <option value="all_obscure_satin">Satin</option> 
+          </select>
+        <br>
+        <label for="mulled_unit">Mulled Unit: </label>
+          <select name="mulled_unit" id="mulled_unit">
+            <option value="no_mull">None</option>
+            <option value="mulled_twin">Twin</option>   
+            <option value="mulled_triple">Triple</option>    
+            <option value="mulled_quad">Quad</option>    
+          </select>
+        <br>
+
+        
+
+      </div>
+
+      <br>
+
+      <LABEL for="top_bars">Top Bars: </LABEL>      
+      <INPUT type="text" id="top_bars" value="">
+      <br>
+      <LABEL for="bottom_bars">Bottom Bars: </LABEL>      
+      <INPUT type="text" id="bottom_bars" value=""> 
+      <p><i>Example (6 Lite or 2V1H) Where 2V is 2 vertical bars and 1H is 1 horizontal bar.</i></p>    
+
+      <br>
+      <br>
+      <LABEL for="window_notes">Notes: </LABEL>      
       <INPUT type="text" id="window_notes" value="">
       <br>      
       <br>
