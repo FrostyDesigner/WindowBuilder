@@ -117,7 +117,8 @@ input
     float: right;
     background-color: #ffffff;
     color: #3f6673;
-    border: 0px;       
+    border: 0px;   
+    width: 150px;    
 }
 
 select
@@ -125,7 +126,7 @@ select
     background-color: #ffffff;
     color: #3f6673;
     float: right;
-    width: 150px;
+    width: 130px;
     direction: rtl;
 }
 
