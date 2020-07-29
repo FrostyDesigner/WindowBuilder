@@ -34,9 +34,9 @@ function getWindowStyle() {
     return (result);
   }
   
-  function addToCart() {
-    document.getElementById("windowBuildTable").innerHTML = "Window Build List";
-    var table = document.getElementById("windowList");
+  function addSpecs() {
+    document.getElementById("windowSpecsTitle").innerHTML = "Window Specs";
+    var table = document.getElementById("windowSpecs");
     var row = table.insertRow(-1);
     var cell0 = row.insertCell(0);
     var cell1 = row.insertCell(1);

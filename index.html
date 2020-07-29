@@ -29,7 +29,9 @@
   </script>
 
   <script src="scripts/customer.js"></script>
-  <script src="scripts/windowList.js"></script>
+  <script src="scripts/windowSpecs.js"></script>
+  <script src="scripts/windowBuild.js"></script>
+  <script src="scripts/shopList.js"></script>
 
 </head>
 
@@ -37,7 +39,7 @@
 
 <body>
 
-  <header class="jumbotron sticky-top">     
+  <header class=" jumbotron sticky-top">
     <div class="container">
 
       <div>
@@ -87,42 +89,42 @@
 
   <FORM action="http://somesite.com/prog/adduser" method="post">
     <fieldset class="align-center">
- 
+
       <legend>Customer Details</legend>
       <br>
       <LABEL for="name_first">First Name: </LABEL>
       <INPUT type="text" id="name_first" value="">
-      <br>      
+      <br>
       <LABEL for="name_last">Last Name: </LABEL>
       <INPUT type="text" id="name_last" value="">
       <br>
-      <LABEL for="address">Address: </LABEL>      
+      <LABEL for="address">Address: </LABEL>
       <INPUT type="text" id="address" value="">
       <br>
-      <LABEL for="city">City: </LABEL>      
+      <LABEL for="city">City: </LABEL>
       <INPUT type="text" id="city" value="Abilene">
       <br>
-      <LABEL for="state">State: </LABEL>      
+      <LABEL for="state">State: </LABEL>
       <INPUT type="text" id="state" value="TX">
-      <br>     
+      <br>
       <br>
 
 
       <label><u>Contact Information</u></label>
       <br>
-      <LABEL for="phone">Phone: </LABEL>      
+      <LABEL for="phone">Phone: </LABEL>
       <INPUT type="text" id="phone" value="">
       <br>
-      <LABEL for="email">Email: </LABEL>      
+      <LABEL for="email">Email: </LABEL>
       <INPUT type="text" id="email" value="">
       <br>
       <br>
-      <LABEL for="contactnotes">Notes: </LABEL>      
+      <LABEL for="contactnotes">Notes: </LABEL>
       <INPUT type="text" id="contactnotes" value="">
       <br>
       <br>
 
-      
+
       <label>Preferred method of contact:</label>
       <br>
       <input type="radio" id="phone" name="contactPref" value="phone">
@@ -146,7 +148,7 @@
         <label for="windowStyle">Window Style: </label>
         <select name="windowStyle" id="windowStyle">
           <option value="Vinyl">Vinyl</option>
-          <option value="ThermalBRK">ThermalBRK</option>          
+          <option value="ThermalBRK">ThermalBRK</option>
         </select>
         <br>
         <label for="frameColor">Frame Color:</label>
@@ -165,15 +167,15 @@
           <option value="clr-366">Clr/366</option>
           <option value="clr-clr">Clr/Clr</option>
           <option value="clr-270">Clr/270</option>
-          <option value="clr-340">Clr/340</option>          
+          <option value="clr-340">Clr/340</option>
         </select>
         <br>
         <label for="igThickness">IG Thickness:</label>
         <select name="igThickness" id="igThickness">
-          <option value="3-4">3/4</option>
           <option value="7-16">7/16</option>
           <option value="1-2">1/2</option>
-          <option value="5-8">5/8</option>          
+          <option value="5-8">5/8</option>
+          <option value="3-4">3/4</option>
           <option value="1">1</option>
         </select>
         <br>
@@ -181,7 +183,7 @@
         <select name="screen" id="screen">
           <option value="Fiberglass">Fiberglass</option>
           <option value="BlackWire">BlackWire</option>
-          <option value="MillWire">MillWire</option>          
+          <option value="MillWire">MillWire</option>
           <option value="None">None</option>
         </select>
         <br>
@@ -195,29 +197,29 @@
         </select>
         <br>
         <br>
-        <LABEL for="specnotes">Notes: </LABEL>        
+        <LABEL for="specnotes">Notes: </LABEL>
         <INPUT type="text" id="specnotes" value="">
         <br>
         <br>
         <br>
 
 
-        <button class="img-center" type="button" onclick="addToCart()">Add to Cart</button>
+        <button class="img-center" type="button" onclick="addSpecs()">Add Specs</button>
       </div>
     </fieldset>
 
     <fieldset class="align-center">
- 
+
       <legend>Window Build</legend>
       <br>
-      <LABEL for="qty">Qty: </LABEL>      
-      <INPUT type="text" id="qty" value="">
+      <LABEL for="qty">Qty: </LABEL>
+      <INPUT type="text" id="qty" value="3">
       <br>
-      <LABEL for="window_width">Width: </LABEL>      
-      <INPUT type="text" id="window_width" value="">
+      <LABEL for="window_width">Width: </LABEL>
+      <INPUT type="text" id="window_width" value="5">
       <br>
-      <LABEL for="window_height">Height: </LABEL>      
-      <INPUT type="text" id="window_height" value="">
+      <LABEL for="window_height">Height: </LABEL>
+      <INPUT type="text" id="window_height" value="10">
       <br>
       <br>
 
@@ -231,63 +233,64 @@
 
       <div class="slidecontainer">
         <label for="windowType">Window Type: </label>
-          <select name="windowType" id="windowType">
-            <option value="single_hung">Single Hung</option>
-            <option value="fixed">Fixed</option>    
-            <option value="slider">Slider</option>      
-          </select>
+        <select name="windowType" id="windowType">
+          <option value="single_hung">Single Hung</option>
+          <option value="fixed">Fixed</option>
+          <option value="slider">Slider</option>
+        </select>
         <br>
         <label for="temp_glass">Tempered Glass: </label>
-          <select name="temp_glass" id="temp_glass">
-            <option value="no_temp">None</option>
-            <option value="all_temp">Tempered</option>    
-            <option value="bot_temp">Bottom Tempered</option>      
-          </select>
+        <select name="temp_glass" id="temp_glass">
+          <option value="no_temp">None</option>
+          <option value="all_temp">Tempered</option>
+          <option value="bot_temp">Bottom Tempered</option>
+        </select>
         <br>
         <label for="obscure_glass">Obscures Glass: </label>
-          <select name="obscure_glass" id="obscure_glass">
-            <option value="no_obscure">None</option>
-            <option value="all_obscure_p62">P62</option>    
-            <option value="all_obscure_rain">Rain</option>     
-            <option value="all_obscure_satin">Satin</option> 
-          </select>
+        <select name="obscure_glass" id="obscure_glass">
+          <option value="no_obscure">None</option>
+          <option value="all_obscure_p62">P62</option>
+          <option value="all_obscure_rain">Rain</option>
+          <option value="all_obscure_satin">Satin</option>
+        </select>
         <br>
         <label for="mulled_unit">Mulled Unit: </label>
-          <select name="mulled_unit" id="mulled_unit">
-            <option value="no_mull">None</option>
-            <option value="mulled_twin">Twin</option>   
-            <option value="mulled_triple">Triple</option>    
-            <option value="mulled_quad">Quad</option>    
-          </select>
+        <select name="mulled_unit" id="mulled_unit">
+          <option value="no_mull">None</option>
+          <option value="mulled_twin">Twin</option>
+          <option value="mulled_triple">Triple</option>
+          <option value="mulled_quad">Quad</option>
+        </select>
         <br>
 
-        
+
 
       </div>
 
       <br>
 
-      <LABEL for="top_bars">Top Bars: </LABEL>      
-      <INPUT type="text" id="top_bars" value="">
+      <LABEL for="top_bars">Top Bars: </LABEL>
+      <INPUT type="text" id="top_bars" value="toppsies!!">
       <br>
-      <LABEL for="bottom_bars">Bottom Bars: </LABEL>      
-      <INPUT type="text" id="bottom_bars" value=""> 
-      <p><i>Example (6 Lite or 2V1H) Where 2V is 2 vertical bars and 1H is 1 horizontal bar.</i></p>    
+      <LABEL for="bottom_bars">Bottom Bars: </LABEL>
+      <INPUT type="text" id="bottom_bars" value="bottomsies!!">
+      <p><i>Example (6 Lite or 2V1H) Where 2V is 2 vertical bars and 1H is 1 horizontal bar.</i></p>
 
       <br>
       <br>
-      <LABEL for="window_notes">Notes: </LABEL>      
+      <LABEL for="window_notes">Notes: </LABEL>
       <INPUT type="text" id="window_notes" value="">
-      <br>      
       <br>
       <br>
-      <button class="img-center" type="button" onclick="addCustomerToDatabase()">Add Window</button>
+      <br>
+      <button class="img-center" type="button" onclick="addWindowBuild()">Add Window</button>
+
+
     </fieldset>
   </FORM>
-  
+
   <p style="clear:both;"><br></p>
   <!--clear float left and adds break line-->
-
 
   <br>
   <br>
@@ -304,8 +307,8 @@
     </tr>
   </table>
   <br>
-  <h3 id=windowBuildTable></h3>
-  <table id="windowList">
+  <h3 id=windowSpecsTitle></h3>
+  <table id="windowSpecs">
     <tr>
       <th>Window Style</th>
       <th>Frame Color</th>
@@ -316,6 +319,31 @@
     </tr>
   </table>
   <br>
+  <h3 id=windowBuildTitle></h3>
+  <table id="windowBuild">
+    <tr>
+      <th>Qty</th>
+      <th>Width</th>
+      <th>Height</th>
+      <th>Long Point</th>
+      <th>Flat Sill</th>
+      <th>Window Type</th>
+      <th>Tempered Glass</th>
+      <th>Obscure Glass</th>
+      <th>Mulled Unit</th>
+      <th>Top Bars</th>
+      <th>Bottom Bars</th>
+    </tr>
+  </table>
+  <br>
+  <h3 id=shopListTitle></h3>
+  <table id=shopList>
+    <tr>
+      <th>Material</th>
+      <th>Total Length</th>
+    </tr>
+  </table>
+  <br>
 
   <footer class="site-footer">
     <div class="container">
@@ -323,7 +351,7 @@
         <div class="col-4 col-sm-2 offset-1">
           <h5>Links</h5>
           <ul class="list-unstyled">
-            <li><a href="#">Home</a></li>            
+            <li><a href="#">Home</a></li>
           </ul>
         </div>
         <div class="col-6 col-sm-5 text-center">

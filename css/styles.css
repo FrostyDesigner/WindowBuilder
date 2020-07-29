@@ -1,48 +1,48 @@
-table, td, th 
-{
+/* Dot vs pound sign
+. refers to a class. <span class="one" /> could be selected with .one.
+
+# refers to an ID. <span id="one" /> could be selected with #one. */
+
+table,
+td,
+th {
     border: 1px solid black;
 }
 
-body 
-{
-    font-family: 'Ubuntu', sans-serif;  
-    background-color: #f0f0f0;          
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #f0f0f0;
 }
 
-.img-center 
-{
+.img-center {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-.jumbotron 
-{
-    margin: 0;    
+.jumbotron {
+    margin: 0;
     padding: 0px;
     height: 100px;
-    background-color: #dcc98a;      
+    background-color: #dcc98a;
 }
 
-.navbar 
-{
-    background-color: #3f6673;    
+.navbar {
+    background-color: #3f6673;
     padding: 0px;
     color: white
 }
 
-.dropdown .dropbtn 
-{    
-    font-size: inherit;    
-    border: inherit;    
-    outline: inherit;    
-    color: inherit;    
+.dropdown .dropbtn {
+    font-size: inherit;
+    border: inherit;
+    outline: inherit;
+    color: inherit;
     background-color: inherit;
-    font-family: inherit;    
+    font-family: inherit;
 }
 
-.dropdown-content 
-{
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -51,8 +51,7 @@ body
     z-index: 1;
 }
 
-.dropdown-content a 
-{
+.dropdown-content a {
     float: none;
     color: black;
     padding: 12px 16px;
@@ -61,30 +60,25 @@ body
     text-align: left;
 }
 
-.dropdown-content a:hover 
-{
+.dropdown-content a:hover {
     background-color: #ddd;
 }
 
-.dropdown:hover .dropdown-content 
-{
+.dropdown:hover .dropdown-content {
     display: block;
 }
 
-.navbarleft 
-{
+.navbarleft {
     float: left;
     margin-left: 35px;
 }
 
-.navbarright
-{
+.navbarright {
     float: right;
     margin-left: 35px;
 }
 
-fieldset 
-{        
+fieldset {
     float: left;
     background-color: #e3edf1;
     font-weight: bold;
@@ -92,15 +86,14 @@ fieldset
     border-color: #3f6673;
     border-style: solid;
     border-width: 10px;
-    border-radius: 20px;    
+    border-radius: 20px;
     margin: 20px 20px 0px 20px;
-    padding: 10px;    
+    padding: 10px;
     width: 90%;
     max-width: 400px;
 }
 
-legend 
-{
+legend {
     color: #3f6673;
     border-color: #3f6673;
     border-width: 10px;
@@ -109,25 +102,22 @@ legend
     border-style: solid;
     width: 250px;
     padding-left: 10px;
-    margin-left: -20px;    
+    margin-left: -20px;
 }
 
-input
-{
+input {
     float: right;
     background-color: #ffffff;
     color: #3f6673;
-    border: 0px;   
-    width: 150px;    
+    border: 0px;
+    width: 150px;
 }
 
-.mycheckbox
-{
+.mycheckbox {
     width: 20px;
 }
 
-select
-{
+select {
     background-color: #ffffff;
     color: #3f6673;
     float: right;
@@ -135,58 +125,127 @@ select
     direction: rtl;
 }
 
-.site-footer 
-{
-    background-color: #3f6673;    
+.site-footer {
+    background-color: #3f6673;
     padding: 20px 0px;
 }
 
 /* table styling */
-
-#windowList {
+/* Customer Info Table */
+#custInfo {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 90%;
-  }
-  
-  #windowList td, #windowList th {
+}
+
+#custInfo td,
+#custInfo th {
     border: 1px solid #ddd;
     padding: 8px;
-  }
-  
-  #windowList tr:nth-child(even){background-color: #f2f2f2;}
-  
-  #windowList tr:hover {background-color: #ddd;}
-  
-  #windowList th {
+}
+
+#custInfo tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#custInfo tr:hover {
+    background-color: #ddd;
+}
+
+#custInfo th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #7090bf;
+    background-color: #3f6673;
     color: white;
-  }
-  
-  #custInfo {
-      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-      border-collapse: collapse;
-      width: 90%;
-    }
-    
-    #custInfo td, #custInfo th {
-      border: 1px solid #ddd;
-      padding: 8px;
-    }
-    
-    #custInfo tr:nth-child(even){background-color: #f2f2f2;}
-    
-    #custInfo tr:hover {background-color: #ddd;}
-    
-    #custInfo th {
-      padding-top: 12px;
-      padding-bottom: 12px;
-      text-align: left;
-      background-color: #7090bf;
-      color: white;
-    }
+}
+
+/* Window Specs Table */
+#windowSpecs {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+#windowSpecs td,
+#windowSpecs th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#windowSpecs tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#windowSpecs tr:hover {
+    background-color: #ddd;
+}
+
+#windowSpecs th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    /* background-color: #7090bf; */
+    background-color: #e91e1e;
+    color: white;
+}
+
+/* Window Build Table */
+#windowBuild {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+#windowBuild td,
+#windowBuild th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#windowBuild tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#windowBuild tr:hover {
+    background-color: #ddd;
+}
+
+#windowBuild th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #bde020;
+    color: white;
+}
+
+/* Shop List Table */
+#shopList {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+#shopList td,
+#shopList th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#shopList tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#shopList tr:hover {
+    background-color: #ddd;
+}
+
+#shopList th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #0aa71f;
+    color: white;
+}
 
 /* end table styling */
