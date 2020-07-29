@@ -23,3 +23,5 @@ There are currently 4 seperate output tables:
 - Window Specs
 - Window Build
 - Shop List / Order Form
+
+![Application Design View](https://github.com/FrostyDesigner/WindowBuilder/blob/master/img/applicationView.png)
