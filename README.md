@@ -1,5 +1,10 @@
 # WindowBuilder
 
+![Airtite Window Products](https://github.com/FrostyDesigner/WindowBuilder/blob/master/img/logo2.png)
+
+[Airtite Window Products](http://www.airtiteproducts.com/)
+
+
 Currently a work in progress designed to assist in the data collection, design, fabrication and inventory of windows for residential  and commercial installations.
 
 The design is subject to change.
