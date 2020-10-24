@@ -50,7 +50,7 @@ function getPhone() {
 }
 
 function getEmail() {
-    var e = document.getElementById("email");
+    var e = document.getElementById("email"); 
     var result = e.value;
     return (result);
 }
